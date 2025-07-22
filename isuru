@@ -1,0 +1,149 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+
+export default function HomePage() {
+  return (
+    <div className="min-h-screen bg-black text-gold p-6">
+      <header className="text-center mb-10">
+        <img
+          src="/logo.png"
+          alt="La Maison de Cattleya Paris"
+          className="mx-auto w-40"
+        />
+        <h1 className="text-4xl font-serif mt-4">La Maison de Cattleya</h1>
+        <p className="text-lg italic">Luxe. Élégance. Paris.</p>
+      </header>
+
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {products.map((product, index) => (
+          <Card key={index} className="bg-white text-black">
+            <CardContent className="p-4">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-64 object-cover rounded"
+              />
+              <h2 className="text-xl font-semibold mt-4">{product.name}</h2>
+              <p className="text-gray-600">{product.price}</p>
+              <Button className="mt-4 w-full">Ajouter au panier</Button>
+            </CardContent>
+          </Card>
+        ))}
+      </section>
+    </div>
+  );
+}
+
+const products = [
+  {
+    name: "Sneakers LV Verte Classique",
+    price: "229€",
+    image: "/shoes/lv_vert_classique.jpg",
+  },
+  {
+    name: "Sneakers LV Bleu Trail (lacets turquoise)",
+    price: "229€",
+    image: "/shoes/lv_bleu_turquoise.jpg",
+  },
+  {
+    name: "Sneakers LV Noires Fleur Blanche",
+    price: "239€",
+    image: "/shoes/lv_noire_fleur.jpg",
+  },
+  {
+    name: "Sneakers LV Crème Unies",
+    price: "229€",
+    image: "/shoes/lv_creme.jpg",
+  },
+  {
+    name: "Sneakers LV Roses Monochrome",
+    price: "229€",
+    image: "/shoes/lv_rose.jpg",
+  },
+  {
+    name: "Sneakers LV Noires Strass",
+    price: "239€",
+    image: "/shoes/lv_strass.jpg",
+  },
+  {
+    name: "Sneakers LV Noires & Blanches",
+    price: "229€",
+    image: "/shoes/lv_noire_blanche.jpg",
+  },
+  {
+    name: "Sneakers LV Full Black",
+    price: "229€",
+    image: "/shoes/lv_full_black.jpg",
+  },
+  {
+    name: "Sneakers LV Rouges Fleur",
+    price: "229€",
+    image: "/shoes/lv_rouge.jpg",
+  },
+  {
+    name: "Sneakers LV Jaune Trail (2ème modèle)",
+    price: "229€",
+    image: "/shoes/lv_jaune_trail.jpg",
+  },
+  {
+    name: "Écharpe Dior Rose Logo",
+    price: "70€",
+    image: "/scarves/dior_rose_logo.jpg",
+  },
+  {
+    name: "Écharpe Chanel Rouge Côtelée",
+    price: "70€",
+    image: "/scarves/chanel_rouge.jpg",
+  },
+  {
+    name: "Écharpe Dior Noire Logo",
+    price: "70€",
+    image: "/scarves/dior_noir_logo.jpg",
+  },
+  {
+    name: "Écharpe LV Beige & Rose",
+    price: "70€",
+    image: "/scarves/lv_beige_rose.jpg",
+  },
+  {
+    name: "Écharpe LV Marron Monogram",
+    price: "70€",
+    image: "/scarves/lv_marron_monogram.jpg",
+  },
+  {
+    name: "Écharpe Chanel Crème Côtelée",
+    price: "70€",
+    image: "/scarves/chanel_creme.jpg",
+  },
+  {
+    name: "Écharpe LV Marron & Beige",
+    price: "70€",
+    image: "/scarves/lv_marron_beige.jpg",
+  },
+  {
+    name: "Écharpe Dior Grise Logo",
+    price: "70€",
+    image: "/scarves/dior_gris_logo.jpg",
+  },
+  {
+    name: "Écharpe LV Damier Gris",
+    price: "70€",
+    image: "/scarves/lv_damier_gris.jpg",
+  },
+  {
+    name: "Écharpe LV Damier Noir",
+    price: "70€",
+    image: "/scarves/lv_damier_noir.jpg",
+  },
+  {
+    name: "Sac LV Multi Pochette Khaki Strap",
+    price: "80€",
+    image: "/bags/lv_multi_khaki.jpg",
+  },
+  {
+    name: "Sac LV Multi Pochette Rose Strap",
+    price: "80€",
+    image: "/bags/lv_multi_rose.jpg",
+  }
+];
